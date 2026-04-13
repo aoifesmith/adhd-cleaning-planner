@@ -107,7 +107,7 @@ function Progress({ items, page, checks, color }) {
   );
 }
 
-function ADHDTip({ text, bg, accent }) {
+function ATip({ text, bg, accent }) {
   return (
     <div style={{ background:bg, border:`1.5px solid ${accent}55`, borderRadius:10, padding:"10px 14px", marginBottom:16, display:"flex", alignItems:"flex-start", gap:10 }}>
       <span style={{ fontSize:18, flexShrink:0 }}>💡</span>
@@ -314,7 +314,7 @@ function DailyPage({ checks, toggle }) {
   return (
     <div>
       <Progress items={DAILY_DATA} page="daily" checks={checks} color={C.pink} />
-      <ADHDTip text="Start with ONE task. Tick it off. Then pick the next. You've got this! ☀️" bg={C.pinkBg} accent={C.pink} />
+      <ATip text="Start with ONE task. Tick it off. Then pick the next. You've got this! ☀️" bg={C.pinkBg} accent={C.pink} />
       <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:14 }}>
         {DAILY_DATA.map(s => <SectionBlock key={s.id} {...s} page="daily" sectionId={s.id} checks={checks} toggle={toggle} />)}
       </div>
@@ -325,7 +325,7 @@ function DailyPage({ checks, toggle }) {
 function WeeklyPage({ checks, toggle }) {
   return (
     <div>
-      <ADHDTip text="One room per day = no overwhelm. Focus ONLY on today's section. You don't have to do it all! 📅" bg={C.peachBg} accent={C.peach} />
+      <ATip text="One room per day = no overwhelm. Focus ONLY on today's section. You don't have to do it all! 📅" bg={C.peachBg} accent={C.peach} />
       {WEEKLY_DATA.map(s => <SectionBlock key={s.id} {...s} page="weekly" sectionId={s.id} checks={checks} toggle={toggle} />)}
     </div>
   );
@@ -334,7 +334,7 @@ function WeeklyPage({ checks, toggle }) {
 function MonthlyPage({ checks, toggle }) {
   return (
     <div>
-      <ADHDTip text="Pick ONE deep-clean zone per week. Spread it out — no guilt, no rush! 🏠" bg={C.sageBg} accent={C.sage} />
+      <ATip text="Pick ONE deep-clean zone per week. Spread it out — no guilt, no rush! 🏠" bg={C.sageBg} accent={C.sage} />
       {MONTHLY_DATA.map(s => <SectionBlock key={s.id} {...s} page="monthly" sectionId={s.id} checks={checks} toggle={toggle} />)}
     </div>
   );
@@ -343,7 +343,7 @@ function MonthlyPage({ checks, toggle }) {
 function SpeedPage({ checks, toggle }) {
   return (
     <div>
-      <ADHDTip text="Set a 10-minute timer. Grab your supplies. GO! Speed cleaning resets your space fast. ⚡" bg={C.lavBg} accent={C.lav} />
+      <ATip text="Set a 10-minute timer. Grab your supplies. GO! Speed cleaning resets your space fast. ⚡" bg={C.lavBg} accent={C.lav} />
       <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:14 }}>
         {SPEED_DATA.map(s => (
           <div key={s.id} style={s.id === "sp_supplies" ? { gridColumn:"1/-1" } : {}}>
@@ -360,7 +360,7 @@ function YearlyPage({ checks, toggle }) {
   const curId = months[new Date().getMonth()];
   return (
     <div>
-      <ADHDTip text="Focus on this month's box only. Tick & feel proud — one month at a time! 🗓️" bg={C.mustardBg} accent={C.mustard} />
+      <ATip text="Focus on this month's box only. Tick & feel proud — one month at a time! 🗓️" bg={C.mustardBg} accent={C.mustard} />
       <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:12 }}>
         {YEARLY_DATA.map(s => (
           <div key={s.id} style={s.id === curId ? { gridColumn:"1/-1" } : {}}>
@@ -376,7 +376,7 @@ function YearlyPage({ checks, toggle }) {
 function LaundryPage({ checks, toggle }) {
   return (
     <div>
-      <ADHDTip text="One load per day = never a laundry mountain again! Just start with today's pile. 🧺" bg={C.sageBg} accent={C.sage} />
+      <ATip text="One load per day = never a laundry mountain again! Just start with today's pile. 🧺" bg={C.sageBg} accent={C.sage} />
       <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12, marginBottom:16 }}>
         {LAUNDRY_DAYS.map(d => (
           <div key={d.day} style={{ display:"flex" }}>
@@ -444,7 +444,7 @@ export default function App() {
             Cleaning Planner
           </div>
           <div style={{ fontSize:12, color:C.soft, marginTop:6, fontWeight:600 }}>
-            Bite-sized tasks · Color-coded · Built for ADHD minds 🧠
+            Bite-sized tasks · Color-coded · Built for minds like mine 🧠
           </div>
         </div>
 
