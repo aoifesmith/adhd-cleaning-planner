@@ -1,6 +1,6 @@
-# 🧠✨ ADHD Cleaning Planner
+# 🧠✨ Cleaning Planner
 
-An interactive, color-coded cleaning planner built for ADHD minds. Bite-sized tasks, progress tracking, and encouraging tips to help you build lasting cleaning habits without the overwhelm.
+An interactive, color-coded cleaning planner built for Aoife's mind. Bite-sized tasks, progress tracking, and encouraging tips to help you build lasting cleaning habits without the overwhelm.
 
 ## Features
 
@@ -70,4 +70,4 @@ Edit any array to add, remove, or change tasks to suit your home!
 
 ---
 
-Made with 💙 for ADHD minds everywhere.
+Made with 💙 for minds like mine everywhere.
